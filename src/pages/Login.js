@@ -6,7 +6,7 @@ const Login = () => {
     <div>
       <h2>Log In</h2>
       <LoginForm />
-      <p className="TextAuth">
+      <p>
         Don't have an account? <NavLink to="/register">Sign up</NavLink>
       </p>
     </div>

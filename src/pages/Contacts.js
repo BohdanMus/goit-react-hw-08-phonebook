@@ -1,5 +1,4 @@
 import { ContactForm } from '../components/ContactForm/ContactForm';
-import { GlobalStyle } from '../components/GlobalStyle';
 import { ContactList } from '../components/ContactList/ContactList';
 import { Filter } from '../components/Filter/Filter';
 import { useDispatch, useSelector } from 'react-redux';
@@ -56,16 +55,35 @@ const Contacts = () => {
     return filteredContacts;
   };
   return (
-    <div>
-      <GlobalStyle />
-      <h1>Phonebook</h1>
-      <ContactForm onAdd={doAddContact} />
-      <h2>Contacts</h2>
-      <Filter filter={filter} onChangeInput={onChangeInput} />
-      {isLoading && <Loader />}
-      {error && <p>Oops, something wrong is going on...</p>}
-      <ContactList contacts={filterNew()} onDelete={doDeleteContact} />
-    </div>
+    <>
+      <div>
+        <h2
+          style={{
+            fontSize: 24,
+          }}
+        >
+          Phonebook
+        </h2>
+        <ContactForm onAdd={doAddContact} />
+      </div>
+      <div>
+        <h2
+          style={{
+            fontSize: 24,
+          }}
+        >
+          Contacts
+        </h2>
+        <div>
+          <Filter filter={filter} onChangeInput={onChangeInput} />
+        </div>
+        <div>
+          {isLoading && <Loader />}
+          {error && <p>Oops, something wrong is going on...</p>}
+          <ContactList contacts={filterNew()} onDelete={doDeleteContact} />
+        </div>
+      </div>
+    </>
   );
 };
 

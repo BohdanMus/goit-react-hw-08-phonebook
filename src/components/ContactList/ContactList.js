@@ -1,22 +1,33 @@
 import PropTypes from 'prop-types';
 import { RiDeleteBin2Line } from 'react-icons/ri';
+import { List, Item, ContactName, ContactNumber } from './ContactList.styled';
+import { FiUser } from 'react-icons/fi';
+import { BsTelephone } from 'react-icons/bs';
+import { IconButton } from '@chakra-ui/react';
 
 export const ContactList = ({ contacts, onDelete }) => {
   return (
-    <ul>
+    <List>
       {contacts.map(contact => {
         return (
-          <li key={contact.id}>
-            <p>
-              {contact.name}: <span>{contact.number}</span>
-            </p>
-            <button type="button" onClick={() => onDelete(contact.id)}>
-              <RiDeleteBin2Line />
-            </button>
-          </li>
+          <Item key={contact.id}>
+            <ContactName>
+              <FiUser />
+              {contact.name}:
+            </ContactName>
+            <ContactNumber>
+              <BsTelephone />
+              {contact.number}
+            </ContactNumber>
+            <IconButton
+              colorScheme="red"
+              icon={<RiDeleteBin2Line />}
+              onClick={() => onDelete(contact.id)}
+            />
+          </Item>
         );
       })}
-    </ul>
+    </List>
   );
 };
 
