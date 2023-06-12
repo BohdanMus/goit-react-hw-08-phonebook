@@ -1,13 +1,13 @@
 import { LoginForm } from 'components/LoginForm/LoginForm';
-import { NavLink } from 'react-router-dom';
+import { Link, Title } from './Login.styled';
 
 const Login = () => {
   return (
     <div>
-      <h2>Log In</h2>
+      <Title>Log In</Title>
       <LoginForm />
       <p>
-        Don't have an account? <NavLink to="/register">Sign up</NavLink>
+        Don't have an account? <Link to="/register">Sign up</Link>
       </p>
     </div>
   );

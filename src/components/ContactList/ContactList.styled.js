@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
-  width: 400px;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 8px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin: auto;
+  list-style: none;
+  @media screen and (min-width: 480px) {
+    width: 400px;
+  }
 `;
 export const Item = styled.li`
   display: flex;

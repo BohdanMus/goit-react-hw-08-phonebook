@@ -1,8 +1,10 @@
+import { Title, Text } from './Home.styled';
+
 const Home = () => {
   return (
     <section>
-      <h1>Welcome to Phonebook!</h1>
-      <p>Create your own personal book of contacts</p>
+      <Title>Welcome to Phonebook!</Title>
+      <Text>Create your own personal book of contacts</Text>
     </section>
   );
 };

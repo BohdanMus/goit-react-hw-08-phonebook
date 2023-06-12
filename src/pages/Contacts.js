@@ -16,6 +16,7 @@ import {
   selectIsLoading,
   selectStatusFilter,
 } from 'redux/contacts/ContactsSelectors';
+import { Title, DivContacts } from './Contacts.styled';
 
 const Contacts = () => {
   const contacts = useSelector(selectContacts);
@@ -56,33 +57,29 @@ const Contacts = () => {
   };
   return (
     <>
-      <div>
-        <h2
-          style={{
-            fontSize: 24,
-          }}
-        >
-          Phonebook
-        </h2>
+      <DivContacts>
+        <Title>Phonebook</Title>
         <ContactForm onAdd={doAddContact} />
-      </div>
-      <div>
-        <h2
-          style={{
-            fontSize: 24,
-          }}
-        >
-          Contacts
-        </h2>
+      </DivContacts>
+      <DivContacts>
         <div>
-          <Filter filter={filter} onChangeInput={onChangeInput} />
+          {contacts.length !== 0 && <Title>Contacts</Title>}
+          {contacts.length > 0 && (
+            <Filter filter={filter} onChangeInput={onChangeInput}></Filter>
+          )}
         </div>
         <div>
-          {isLoading && <Loader />}
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <ContactList
+              contacts={filterNew()}
+              onDelete={doDeleteContact}
+            ></ContactList>
+          )}
           {error && <p>Oops, something wrong is going on...</p>}
-          <ContactList contacts={filterNew()} onDelete={doDeleteContact} />
         </div>
-      </div>
+      </DivContacts>
     </>
   );
 };

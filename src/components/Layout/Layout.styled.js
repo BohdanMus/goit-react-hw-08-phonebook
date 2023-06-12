@@ -1,25 +1,24 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin: auto;
+  margin-right: auto;
   margin-left: auto;
-  /* min-width: 320px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  min-width: 320px;
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: center;
-
-  align-items: baseline;
+  flex-direction: column;
   gap: 40px;
+  justify-content: center;
+  align-items: center;
 
-  /* @media screen and (min-width: 768px) {
-    width: 768px;
-    justify-content: space-between;
-
-    flex-wrap: nowrap;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: baseline;
   }
 
   @media screen and (min-width: 1200px) {
-    width: 1200px;
-    justify-content: center;
-  } */
+    flex-direction: row;
+    align-items: baseline;
+  }
 `;

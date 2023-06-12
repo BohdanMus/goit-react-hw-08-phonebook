@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Header = styled.header`
   background-color: #239b56;
   padding: 10px 20px;
+  margin-bottom: 12px;
 `;
 export const Wrapper = styled.div`
   display: flex;

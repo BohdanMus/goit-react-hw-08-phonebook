@@ -12,7 +12,7 @@ export const UserMenu = () => {
 
   return (
     <Div>
-      <Text>Welcome, {user.name}</Text>
+      <Text>Welcome, {user.email}</Text>
       <Avatar
         size={{ base: '2xs', md: 'sm' }}
         src="https://bit.ly/broken-link"
