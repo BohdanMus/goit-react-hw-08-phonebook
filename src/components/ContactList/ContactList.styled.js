@@ -24,11 +24,22 @@ export const ContactName = styled.p`
   display: flex;
   align-items: center;
   gap: 5px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 500;
+  @media screen and (min-width: 480px) {
+    font-weight: 700;
+    font-size: 16px;
+  }
 `;
+
 export const ContactNumber = styled.span`
   display: flex;
   align-items: center;
   gap: 5px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 500;
+  @media screen and (min-width: 480px) {
+    font-weight: 700;
+    font-size: 16px;
+  }
 `;

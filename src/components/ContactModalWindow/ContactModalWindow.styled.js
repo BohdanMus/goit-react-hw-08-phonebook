@@ -1,26 +1,27 @@
 import styled from 'styled-components';
 import {
   Form as FormikForm,
-  ErrorMessage as FormikErrorMessage,
   Field as FormikInput,
+  ErrorMessage as FormikErrorMessage,
 } from 'formik';
 
-export const Form = styled(FormikForm)`
-  max-width: 500px;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: auto;
-  @media screen and (min-width: 480px) {
-    width: 400px;
-  }
-`;
 export const ErrorMessage = styled(FormikErrorMessage)`
   font-size: 12px;
   color: red;
+`;
+
+export const Form = styled(FormikForm)`
+  position: relative;
+  margin: auto;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 40px;
+
+  background-color: white;
+  border-radius: 8px;
 `;
 
 export const Field = styled(FormikInput)`

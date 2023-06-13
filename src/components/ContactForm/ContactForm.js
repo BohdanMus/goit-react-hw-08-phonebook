@@ -57,7 +57,7 @@ export const ContactForm = ({ onAdd }) => {
                 </FormControl>
               )}
             </Field>
-            <ErrorMessage name="name" component="div" />
+            <ErrorMessage name="name" component="span" />
             <Field name="number">
               {({ field }) => (
                 <FormControl isInvalid={isErrorNumber} isRequired>
@@ -76,7 +76,7 @@ export const ContactForm = ({ onAdd }) => {
                 </FormControl>
               )}
             </Field>
-            <ErrorMessage name="number" component="div" />
+            <ErrorMessage name="number" component="span" />
             <Button
               leftIcon={<AiOutlineUserAdd />}
               mt={4}
